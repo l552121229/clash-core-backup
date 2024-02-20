@@ -3,9 +3,9 @@ module clash-test
 go 1.21
 
 require (
-	github.com/l552121229/clash-core-backup v1.12.0
 	github.com/docker/docker v24.0.5+incompatible
 	github.com/docker/go-connections v0.4.0
+	github.com/l552121229/clash-core-backup v1.12.0
 	github.com/miekg/dns v1.1.55
 	github.com/stretchr/testify v1.8.4
 	go.uber.org/automaxprocs v1.5.3
@@ -15,7 +15,6 @@ require (
 replace github.com/l552121229/clash-core-backup => ../
 
 require (
-	github.com/l552121229/protobytes v0.0.0-20230617041236-6500a9f4f158 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dlclark/regexp2 v1.10.0 // indirect
@@ -27,6 +26,7 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/insomniacslk/dhcp v0.0.0-20230816195147-b3ca2534940d // indirect
 	github.com/josharian/native v1.1.0 // indirect
+	github.com/l552121229/protobytes v0.0.0-20240220070239-cbfb1241575e // indirect
 	github.com/mdlayher/netlink v1.7.2 // indirect
 	github.com/mdlayher/socket v0.4.1 // indirect
 	github.com/moby/term v0.5.0 // indirect
