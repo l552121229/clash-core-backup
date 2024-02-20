@@ -15,7 +15,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/Dreamacro/protobytes"
+	"github.com/l552121229/protobytes"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 
@@ -145,7 +145,8 @@ func (vc *Conn) recvResponse() error {
 			return err
 		}
 
-		decryptedResponseHeaderLengthBinaryBuffer, err := aeadResponseHeaderLengthEncryptionAEAD.Open(nil, aeadResponseHeaderLengthEncryptionIV, aeadEncryptedResponseHeaderLength[:], nil)
+		decryptedResponseHeaderLengthBinaryBuffer, err := aeadResponseHeaderLengthEncryptionAEAD.Open(nil,
+			aeadResponseHeaderLengthEncryptionIV, aeadEncryptedResponseHeaderLength[:], nil)
 		if err != nil {
 			return err
 		}
@@ -161,7 +162,8 @@ func (vc *Conn) recvResponse() error {
 			return err
 		}
 
-		buf, err = aeadResponseHeaderPayloadEncryptionAEAD.Open(nil, aeadResponseHeaderPayloadEncryptionIV, encryptedResponseHeaderBuffer, nil)
+		buf, err = aeadResponseHeaderPayloadEncryptionAEAD.Open(nil, aeadResponseHeaderPayloadEncryptionIV,
+			encryptedResponseHeaderBuffer, nil)
 		if err != nil {
 			return err
 		}

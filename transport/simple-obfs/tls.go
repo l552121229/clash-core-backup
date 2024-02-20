@@ -9,7 +9,7 @@ import (
 
 	"github.com/l552121229/clash-core-backup/common/pool"
 
-	"github.com/Dreamacro/protobytes"
+	"github.com/l552121229/protobytes"
 )
 
 const (

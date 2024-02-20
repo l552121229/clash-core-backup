@@ -3,7 +3,6 @@ module github.com/l552121229/clash-core-backup
 go 1.21
 
 require (
-	github.com/Dreamacro/protobytes v0.0.0-20230617041236-6500a9f4f158
 	github.com/dlclark/regexp2 v1.10.0
 	github.com/go-chi/chi/v5 v5.0.10
 	github.com/go-chi/cors v1.2.1
@@ -34,6 +33,7 @@ require (
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/josharian/native v1.1.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
+	github.com/l552121229/protobytes v0.0.0-20240220070239-cbfb1241575e // indirect
 	github.com/mdlayher/socket v0.4.1 // indirect
 	github.com/oschwald/maxminddb-golang v1.11.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.14 // indirect

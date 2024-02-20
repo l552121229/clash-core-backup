@@ -11,7 +11,7 @@ import (
 	"hash/crc32"
 	"time"
 
-	"github.com/Dreamacro/protobytes"
+	"github.com/l552121229/protobytes"
 )
 
 const (
@@ -73,18 +73,23 @@ func sealVMessAEADHeader(key [16]byte, data []byte, t time.Time) []byte {
 	var payloadHeaderLengthAEADEncrypted []byte
 
 	{
-		payloadHeaderLengthAEADKey := kdf(key[:], kdfSaltConstVMessHeaderPayloadLengthAEADKey, string(generatedAuthID[:]), string(connectionNonce))[:16]
-		payloadHeaderLengthAEADNonce := kdf(key[:], kdfSaltConstVMessHeaderPayloadLengthAEADIV, string(generatedAuthID[:]), string(connectionNonce))[:12]
+		payloadHeaderLengthAEADKey := kdf(key[:], kdfSaltConstVMessHeaderPayloadLengthAEADKey,
+			string(generatedAuthID[:]), string(connectionNonce))[:16]
+		payloadHeaderLengthAEADNonce := kdf(key[:], kdfSaltConstVMessHeaderPayloadLengthAEADIV,
+			string(generatedAuthID[:]), string(connectionNonce))[:12]
 		payloadHeaderLengthAEADAESBlock, _ := aes.NewCipher(payloadHeaderLengthAEADKey)
 		payloadHeaderAEAD, _ := cipher.NewGCM(payloadHeaderLengthAEADAESBlock)
-		payloadHeaderLengthAEADEncrypted = payloadHeaderAEAD.Seal(nil, payloadHeaderLengthAEADNonce, aeadPayloadLengthSerializedByte, generatedAuthID[:])
+		payloadHeaderLengthAEADEncrypted = payloadHeaderAEAD.Seal(nil, payloadHeaderLengthAEADNonce,
+			aeadPayloadLengthSerializedByte, generatedAuthID[:])
 	}
 
 	var payloadHeaderAEADEncrypted []byte
 
 	{
-		payloadHeaderAEADKey := kdf(key[:], kdfSaltConstVMessHeaderPayloadAEADKey, string(generatedAuthID[:]), string(connectionNonce))[:16]
-		payloadHeaderAEADNonce := kdf(key[:], kdfSaltConstVMessHeaderPayloadAEADIV, string(generatedAuthID[:]), string(connectionNonce))[:12]
+		payloadHeaderAEADKey := kdf(key[:], kdfSaltConstVMessHeaderPayloadAEADKey, string(generatedAuthID[:]),
+			string(connectionNonce))[:16]
+		payloadHeaderAEADNonce := kdf(key[:], kdfSaltConstVMessHeaderPayloadAEADIV, string(generatedAuthID[:]),
+			string(connectionNonce))[:12]
 		payloadHeaderAEADAESBlock, _ := aes.NewCipher(payloadHeaderAEADKey)
 		payloadHeaderAEAD, _ := cipher.NewGCM(payloadHeaderAEADAESBlock)
 		payloadHeaderAEADEncrypted = payloadHeaderAEAD.Seal(nil, payloadHeaderAEADNonce, data, generatedAuthID[:])

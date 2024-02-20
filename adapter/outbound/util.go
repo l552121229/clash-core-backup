@@ -8,7 +8,7 @@ import (
 	C "github.com/l552121229/clash-core-backup/constant"
 	"github.com/l552121229/clash-core-backup/transport/socks5"
 
-	"github.com/Dreamacro/protobytes"
+	"github.com/l552121229/protobytes"
 )
 
 func tcpKeepAlive(c net.Conn) {

@@ -14,11 +14,11 @@ import (
 	"github.com/l552121229/clash-core-backup/log"
 	"github.com/l552121229/clash-core-backup/tunnel/statistic"
 
-	"github.com/Dreamacro/protobytes"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/render"
 	"github.com/gorilla/websocket"
+	"github.com/l552121229/protobytes"
 )
 
 var (
