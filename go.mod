@@ -1,4 +1,4 @@
-module github.com/Dreamacro/clash
+module github.com/l552121229/clash-core-backup
 
 go 1.21
 
