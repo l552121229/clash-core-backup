@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Dreamacro/clash/common/pool"
-	"github.com/Dreamacro/clash/log"
-	"github.com/Dreamacro/clash/transport/shadowsocks/core"
-	"github.com/Dreamacro/clash/transport/ssr/tools"
+	"github.com/l552121229/clash-core-backup/common/pool"
+	"github.com/l552121229/clash-core-backup/log"
+	"github.com/l552121229/clash-core-backup/transport/shadowsocks/core"
+	"github.com/l552121229/clash-core-backup/transport/ssr/tools"
 )
 
 func init() {
@@ -199,7 +199,8 @@ func (a *authChainA) EncodePacket(buf *bytes.Buffer, b []byte) error {
 	buf.Write(b)
 	tools.AppendRandBytes(buf, randDataLength)
 	buf.Write(authData)
-	binary.Write(buf, binary.LittleEndian, binary.LittleEndian.Uint32(a.userID[:])^binary.LittleEndian.Uint32(md5Data[:4]))
+	binary.Write(buf, binary.LittleEndian,
+		binary.LittleEndian.Uint32(a.userID[:])^binary.LittleEndian.Uint32(md5Data[:4]))
 	buf.Write(tools.HmacMD5(a.userKey, buf.Bytes())[:1])
 	return nil
 }
@@ -225,7 +226,8 @@ func (a *authChainA) packAuthData(poolBuf *bytes.Buffer, data []byte) {
 	a.initRC4Cipher()
 	poolBuf.Write(a.lastClientHash[:8])
 	// uid
-	binary.Write(poolBuf, binary.LittleEndian, binary.LittleEndian.Uint32(a.userID[:])^binary.LittleEndian.Uint32(a.lastClientHash[8:12]))
+	binary.Write(poolBuf, binary.LittleEndian,
+		binary.LittleEndian.Uint32(a.userID[:])^binary.LittleEndian.Uint32(a.lastClientHash[8:12]))
 	// encrypted data
 	err := a.putEncryptedData(poolBuf, a.userKey, [2]int{a.Overhead, 0}, a.salt)
 	if err != nil {
@@ -298,7 +300,8 @@ func (a *authChainA) getRandLength(length int, lastHash []byte, random *tools.Xo
 }
 
 func (a *authChainA) initRC4Cipher() {
-	key := core.Kdf(base64.StdEncoding.EncodeToString(a.userKey)+base64.StdEncoding.EncodeToString(a.lastClientHash), 16)
+	key := core.Kdf(base64.StdEncoding.EncodeToString(a.userKey)+base64.StdEncoding.EncodeToString(a.lastClientHash),
+		16)
 	a.encrypter, _ = rc4.NewCipher(key)
 	a.decrypter, _ = rc4.NewCipher(key)
 }

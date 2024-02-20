@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/Dreamacro/clash/log"
+	"github.com/l552121229/clash-core-backup/log"
 )
 
 var printMarkWarn = sync.OnceFunc(func() {

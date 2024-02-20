@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Dreamacro/clash/transport/socks5"
+	"github.com/l552121229/clash-core-backup/transport/socks5"
 
 	"golang.org/x/sys/unix"
 )
@@ -46,7 +46,8 @@ func parserPacket(conn net.Conn) (socks5.Addr, error) {
 func getorigdst(fd uintptr) (netip.AddrPort, error) {
 	addr := unix.RawSockaddrInet4{}
 	size := uint32(unsafe.Sizeof(addr))
-	if err := socketcall(GETSOCKOPT, fd, syscall.IPPROTO_IP, SO_ORIGINAL_DST, uintptr(unsafe.Pointer(&addr)), uintptr(unsafe.Pointer(&size)), 0); err != nil {
+	if err := socketcall(GETSOCKOPT, fd, syscall.IPPROTO_IP, SO_ORIGINAL_DST, uintptr(unsafe.Pointer(&addr)),
+		uintptr(unsafe.Pointer(&size)), 0); err != nil {
 		return netip.AddrPort{}, err
 	}
 	port := binary.BigEndian.Uint16((*(*[2]byte)(unsafe.Pointer(&addr.Port)))[:])
@@ -56,7 +57,8 @@ func getorigdst(fd uintptr) (netip.AddrPort, error) {
 func getorigdst6(fd uintptr) (netip.AddrPort, error) {
 	addr := unix.RawSockaddrInet6{}
 	size := uint32(unsafe.Sizeof(addr))
-	if err := socketcall(GETSOCKOPT, fd, syscall.IPPROTO_IPV6, IP6T_SO_ORIGINAL_DST, uintptr(unsafe.Pointer(&addr)), uintptr(unsafe.Pointer(&size)), 0); err != nil {
+	if err := socketcall(GETSOCKOPT, fd, syscall.IPPROTO_IPV6, IP6T_SO_ORIGINAL_DST, uintptr(unsafe.Pointer(&addr)),
+		uintptr(unsafe.Pointer(&size)), 0); err != nil {
 		return netip.AddrPort{}, err
 	}
 	port := binary.BigEndian.Uint16((*(*[2]byte)(unsafe.Pointer(&addr.Port)))[:])

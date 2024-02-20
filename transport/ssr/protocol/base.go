@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Dreamacro/clash/common/pool"
-	"github.com/Dreamacro/clash/log"
-	"github.com/Dreamacro/clash/transport/shadowsocks/core"
+	"github.com/l552121229/clash-core-backup/common/pool"
+	"github.com/l552121229/clash-core-backup/log"
+	"github.com/l552121229/clash-core-backup/transport/shadowsocks/core"
 )
 
 type Base struct {

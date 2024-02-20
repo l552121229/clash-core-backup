@@ -5,7 +5,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Dreamacro/clash/transport/socks5"
+	"github.com/l552121229/clash-core-backup/transport/socks5"
 )
 
 func parserPacket(c net.Conn) (socks5.Addr, error) {
@@ -46,7 +46,8 @@ func parserPacket(c net.Conn) (socks5.Addr, error) {
 	nl.sxport[0], nl.sxport[1] = byte(saddr.Port>>8), byte(saddr.Port)
 	nl.dxport[0], nl.dxport[1] = byte(daddr.Port>>8), byte(daddr.Port)
 
-	if _, _, errno := syscall.Syscall(syscall.SYS_IOCTL, uintptr(fd), DIOCNATLOOK, uintptr(unsafe.Pointer(&nl))); errno != 0 {
+	if _, _, errno := syscall.Syscall(syscall.SYS_IOCTL, uintptr(fd), DIOCNATLOOK,
+		uintptr(unsafe.Pointer(&nl))); errno != 0 {
 		return nil, errno
 	}
 

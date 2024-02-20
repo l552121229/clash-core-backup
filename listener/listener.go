@@ -7,16 +7,16 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Dreamacro/clash/adapter/inbound"
-	"github.com/Dreamacro/clash/config"
-	C "github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/listener/http"
-	"github.com/Dreamacro/clash/listener/mixed"
-	"github.com/Dreamacro/clash/listener/redir"
-	"github.com/Dreamacro/clash/listener/socks"
-	"github.com/Dreamacro/clash/listener/tproxy"
-	"github.com/Dreamacro/clash/listener/tunnel"
-	"github.com/Dreamacro/clash/log"
+	"github.com/l552121229/clash-core-backup/adapter/inbound"
+	"github.com/l552121229/clash-core-backup/config"
+	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/l552121229/clash-core-backup/listener/http"
+	"github.com/l552121229/clash-core-backup/listener/mixed"
+	"github.com/l552121229/clash-core-backup/listener/redir"
+	"github.com/l552121229/clash-core-backup/listener/socks"
+	"github.com/l552121229/clash-core-backup/listener/tproxy"
+	"github.com/l552121229/clash-core-backup/listener/tunnel"
+	"github.com/l552121229/clash-core-backup/log"
 
 	"github.com/samber/lo"
 )
@@ -271,7 +271,8 @@ func PatchTunnel(tunnels []config.Tunnel, tcpIn chan<- C.ConnContext, udpIn chan
 				continue
 			}
 			tunnelTCPListeners[key] = l
-			log.Infoln("Tunnel(tcp/%s) proxy %s listening at: %s", elm.target, elm.proxy, tunnelTCPListeners[key].Address())
+			log.Infoln("Tunnel(tcp/%s) proxy %s listening at: %s", elm.target, elm.proxy,
+				tunnelTCPListeners[key].Address())
 		} else {
 			l, err := tunnel.NewUDP(elm.addr, elm.target, elm.proxy, udpIn)
 			if err != nil {
@@ -279,7 +280,8 @@ func PatchTunnel(tunnels []config.Tunnel, tcpIn chan<- C.ConnContext, udpIn chan
 				continue
 			}
 			tunnelUDPListeners[key] = l
-			log.Infoln("Tunnel(udp/%s) proxy %s listening at: %s", elm.target, elm.proxy, tunnelUDPListeners[key].Address())
+			log.Infoln("Tunnel(udp/%s) proxy %s listening at: %s", elm.target, elm.proxy,
+				tunnelUDPListeners[key].Address())
 		}
 	}
 }

@@ -9,15 +9,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Dreamacro/clash/adapter/inbound"
-	"github.com/Dreamacro/clash/component/nat"
-	P "github.com/Dreamacro/clash/component/process"
-	"github.com/Dreamacro/clash/component/resolver"
-	C "github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/constant/provider"
-	icontext "github.com/Dreamacro/clash/context"
-	"github.com/Dreamacro/clash/log"
-	"github.com/Dreamacro/clash/tunnel/statistic"
+	"github.com/l552121229/clash-core-backup/adapter/inbound"
+	"github.com/l552121229/clash-core-backup/component/nat"
+	P "github.com/l552121229/clash-core-backup/component/process"
+	"github.com/l552121229/clash-core-backup/component/resolver"
+	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/l552121229/clash-core-backup/constant/provider"
+	icontext "github.com/l552121229/clash-core-backup/context"
+	"github.com/l552121229/clash-core-backup/log"
+	"github.com/l552121229/clash-core-backup/tunnel/statistic"
 
 	"go.uber.org/atomic"
 )
@@ -263,7 +263,8 @@ func handleUDPConn(packet *inbound.PacketAdapter) {
 					err.Error(),
 				)
 			} else {
-				log.Warnln("[UDP] dial %s (match %s/%s) %s --> %s error: %s", proxy.Name(), rule.RuleType().String(), rule.Payload(), metadata.SourceAddress(), metadata.RemoteAddress(), err.Error())
+				log.Warnln("[UDP] dial %s (match %s/%s) %s --> %s error: %s", proxy.Name(), rule.RuleType().String(),
+					rule.Payload(), metadata.SourceAddress(), metadata.RemoteAddress(), err.Error())
 			}
 			return
 		}
@@ -272,7 +273,8 @@ func handleUDPConn(packet *inbound.PacketAdapter) {
 
 		switch true {
 		case metadata.SpecialProxy != "":
-			log.Infoln("[UDP] %s --> %s using %s", metadata.SourceAddress(), metadata.RemoteAddress(), metadata.SpecialProxy)
+			log.Infoln("[UDP] %s --> %s using %s", metadata.SourceAddress(), metadata.RemoteAddress(),
+				metadata.SpecialProxy)
 		case rule != nil:
 			log.Infoln(
 				"[UDP] %s --> %s match %s(%s) using %s",
@@ -336,7 +338,8 @@ func handleTCPConn(connCtx C.ConnContext) {
 				err.Error(),
 			)
 		} else {
-			log.Warnln("[TCP] dial %s (match %s/%s) %s --> %s error: %s", proxy.Name(), rule.RuleType().String(), rule.Payload(), metadata.SourceAddress(), metadata.RemoteAddress(), err.Error())
+			log.Warnln("[TCP] dial %s (match %s/%s) %s --> %s error: %s", proxy.Name(), rule.RuleType().String(),
+				rule.Payload(), metadata.SourceAddress(), metadata.RemoteAddress(), err.Error())
 		}
 		return
 	}
@@ -345,7 +348,8 @@ func handleTCPConn(connCtx C.ConnContext) {
 
 	switch true {
 	case metadata.SpecialProxy != "":
-		log.Infoln("[TCP] %s --> %s using %s", metadata.SourceAddress(), metadata.RemoteAddress(), metadata.SpecialProxy)
+		log.Infoln("[TCP] %s --> %s using %s", metadata.SourceAddress(), metadata.RemoteAddress(),
+			metadata.SpecialProxy)
 	case rule != nil:
 		log.Infoln(
 			"[TCP] %s --> %s match %s(%s) using %s",
@@ -405,7 +409,8 @@ func match(metadata *C.Metadata) (C.Proxy, C.Rule, error) {
 			srcIP, ok := netip.AddrFromSlice(metadata.SrcIP)
 			if ok && metadata.OriginDst.IsValid() {
 				srcIP = srcIP.Unmap()
-				path, err := P.FindProcessPath(metadata.NetWork.String(), netip.AddrPortFrom(srcIP, uint16(metadata.SrcPort)), metadata.OriginDst)
+				path, err := P.FindProcessPath(metadata.NetWork.String(),
+					netip.AddrPortFrom(srcIP, uint16(metadata.SrcPort)), metadata.OriginDst)
 				if err != nil {
 					log.Debugln("[Process] find process %s: %v", metadata.String(), err)
 				} else {

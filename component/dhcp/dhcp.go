@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/Dreamacro/clash/component/iface"
+	"github.com/l552121229/clash-core-backup/component/iface"
 
 	"github.com/insomniacslk/dhcp/dhcpv4"
 )
@@ -29,7 +29,8 @@ func ResolveDNSFromDHCP(context context.Context, ifaceName string) ([]net.IP, er
 		return nil, err
 	}
 
-	discovery, err := dhcpv4.NewDiscovery(ifaceObj.HardwareAddr, dhcpv4.WithBroadcast(true), dhcpv4.WithRequestedOptions(dhcpv4.OptionDomainNameServer))
+	discovery, err := dhcpv4.NewDiscovery(ifaceObj.HardwareAddr, dhcpv4.WithBroadcast(true),
+		dhcpv4.WithRequestedOptions(dhcpv4.OptionDomainNameServer))
 	if err != nil {
 		return nil, err
 	}

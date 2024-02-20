@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	C "github.com/Dreamacro/clash/constant"
+	C "github.com/l552121229/clash-core-backup/constant"
 
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"
@@ -74,10 +74,11 @@ func TestParseRule(t *testing.T) {
 			expectedRule: lo.Must(NewIPCIDR("2001:db8::/32", policy, WithIPCIDRNoResolve(true))),
 		},
 		{
-			tp:           C.RuleConfigSrcIPCIDR,
-			payload:      "192.168.1.201/32",
-			target:       policy,
-			expectedRule: lo.Must(NewIPCIDR("192.168.1.201/32", policy, WithIPCIDRSourceIP(true), WithIPCIDRNoResolve(true))),
+			tp:      C.RuleConfigSrcIPCIDR,
+			payload: "192.168.1.201/32",
+			target:  policy,
+			expectedRule: lo.Must(NewIPCIDR("192.168.1.201/32", policy, WithIPCIDRSourceIP(true),
+				WithIPCIDRNoResolve(true))),
 		},
 		{
 			tp:           C.RuleConfigSrcPort,

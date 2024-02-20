@@ -1,7 +1,7 @@
 package provider
 
 import (
-	"github.com/Dreamacro/clash/constant"
+	"github.com/l552121229/clash-core-backup/constant"
 )
 
 // Vehicle Type

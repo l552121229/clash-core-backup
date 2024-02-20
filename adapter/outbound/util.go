@@ -4,9 +4,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/Dreamacro/clash/component/resolver"
-	C "github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/transport/socks5"
+	"github.com/l552121229/clash-core-backup/component/resolver"
+	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/l552121229/clash-core-backup/transport/socks5"
 
 	"github.com/Dreamacro/protobytes"
 )

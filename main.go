@@ -9,11 +9,11 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/Dreamacro/clash/config"
-	C "github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/hub"
-	"github.com/Dreamacro/clash/hub/executor"
-	"github.com/Dreamacro/clash/log"
+	"github.com/l552121229/clash-core-backup/config"
+	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/l552121229/clash-core-backup/hub"
+	"github.com/l552121229/clash-core-backup/hub/executor"
+	"github.com/l552121229/clash-core-backup/log"
 
 	"go.uber.org/automaxprocs/maxprocs"
 )
@@ -48,7 +48,8 @@ func init() {
 func main() {
 	maxprocs.Set(maxprocs.Logger(func(string, ...any) {}))
 	if version {
-		fmt.Printf("Clash %s %s %s with %s %s\n", C.Version, runtime.GOOS, runtime.GOARCH, runtime.Version(), C.BuildTime)
+		fmt.Printf("Clash %s %s %s with %s %s\n", C.Version, runtime.GOOS, runtime.GOARCH, runtime.Version(),
+			C.BuildTime)
 		return
 	}
 

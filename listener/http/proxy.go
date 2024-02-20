@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Dreamacro/clash/adapter/inbound"
-	"github.com/Dreamacro/clash/common/cache"
-	N "github.com/Dreamacro/clash/common/net"
-	C "github.com/Dreamacro/clash/constant"
-	authStore "github.com/Dreamacro/clash/listener/auth"
-	"github.com/Dreamacro/clash/log"
+	"github.com/l552121229/clash-core-backup/adapter/inbound"
+	"github.com/l552121229/clash-core-backup/common/cache"
+	N "github.com/l552121229/clash-core-backup/common/net"
+	C "github.com/l552121229/clash-core-backup/constant"
+	authStore "github.com/l552121229/clash-core-backup/listener/auth"
+	"github.com/l552121229/clash-core-backup/log"
 )
 
 func HandleConn(c net.Conn, in chan<- C.ConnContext, cache *cache.LruCache) {
@@ -44,7 +44,8 @@ func HandleConn(c net.Conn, in chan<- C.ConnContext, cache *cache.LruCache) {
 		if trusted {
 			if request.Method == http.MethodConnect {
 				// Manual writing to support CONNECT for http 1.0 (workaround for uplay client)
-				if _, err = fmt.Fprintf(conn, "HTTP/%d.%d %03d %s\r\n\r\n", request.ProtoMajor, request.ProtoMinor, http.StatusOK, "Connection established"); err != nil {
+				if _, err = fmt.Fprintf(conn, "HTTP/%d.%d %03d %s\r\n\r\n", request.ProtoMajor, request.ProtoMinor,
+					http.StatusOK, "Connection established"); err != nil {
 					break // close connection
 				}
 
