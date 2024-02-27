@@ -9,7 +9,8 @@ sidebarOrder: 2
 
 ## 使用预编译的二进制文件
 
-您可以在这里下载 Clash 的内核二进制文件: [https://github.com/pp-chicken/clash-core-backup/releases](https://github.com/pp-chicken/clash-core-backup/releases)
+您可以在这里下载 Clash
+的内核二进制文件: [https://github.com/pp-chicken/clash-core-backup/releases](https://github.com/pp-chicken/clash-core-backup/releases)
 
 ## 从源码编译
 

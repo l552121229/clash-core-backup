@@ -5,7 +5,8 @@ sidebarOrder: 4
 
 # Frequently Asked Questions
 
-Here we have some common questions people ask. If you have any questions not listed here, feel free to [open an issue](https://github.com/pp-chicken/clash-core-backup/issues/new/choose).
+Here we have some common questions people ask. If you have any questions not listed here, feel free
+to [open an issue](https://github.com/pp-chicken/clash-core-backup/issues/new/choose).
 
 [[toc]]
 
@@ -14,22 +15,30 @@ Here we have some common questions people ask. If you have any questions not lis
 Quoting from [golang/go](https://github.com/golang/go/wiki/MinimumRequirements#amd64):
 
 > Until Go 1.17, the Go compiler always generated x86 binaries that could be executed by any 64-bit x86 processor.
-> 
+>
 > Go 1.18 introduced [4 architectural levels](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels) for AMD64.
 > Each level differs in the set of x86 instructions that the compiler can include in the generated binaries:
-> 
+>
 > * GOAMD64=v1 (default): The baseline. Exclusively generates instructions that all 64-bit x86 processors can execute.
 > * GOAMD64=v2: all v1 instructions, plus CMPXCHG16B, LAHF, SAHF, POPCNT, SSE3, SSE4.1, SSE4.2, SSSE3.
 > * GOAMD64=v3: all v2 instructions, plus AVX, AVX2, BMI1, BMI2, F16C, FMA, LZCNT, MOVBE, OSXSAVE.
 > * GOAMD64=v4: all v3 instructions, plus AVX512F, AVX512BW, AVX512CD, AVX512DQ, AVX512VL.
-> 
-> Setting, for example, GOAMD64=v3, will allow the Go compiler to use AVX2 instructions in the generated binaries (which may improve performance in some cases); but these binaries will not run on older x86 processors that don't support AVX2.
-> 
-> The Go toolchain may also generate newer instructions, but guarded by dynamic checks to ensure they're only executed on capable processors. For example, with GOAMD64=v1, [math/bits.OnesCount](https://pkg.go.dev/math/bits#OnesCount) will still use the [POPCNT](https://www.felixcloutier.com/x86/popcnt) instruction if [CPUID](https://www.felixcloutier.com/x86/cpuid) reports that it's available. Otherwise, it falls back to a generic implementation.
-> 
+>
+> Setting, for example, GOAMD64=v3, will allow the Go compiler to use AVX2 instructions in the generated binaries (which
+> may improve performance in some cases); but these binaries will not run on older x86 processors that don't support
+> AVX2.
+>
+> The Go toolchain may also generate newer instructions, but guarded by dynamic checks to ensure they're only executed
+> on capable processors. For example, with GOAMD64=v1, [math/bits.OnesCount](https://pkg.go.dev/math/bits#OnesCount)
+> will
+> still use the [POPCNT](https://www.felixcloutier.com/x86/popcnt) instruction
+> if [CPUID](https://www.felixcloutier.com/x86/cpuid) reports that it's available. Otherwise, it falls back to a generic
+> implementation.
+>
 > The Go toolchain does not currently generate any AVX512 instructions.
-> 
-> Note that *processor* is a simplification in this context. In practice, support from the entire system (firmware, hypervisor, kernel) is needed.
+>
+> Note that *processor* is a simplification in this context. In practice, support from the entire system (firmware,
+> hypervisor, kernel) is needed.
 
 ## Which release should I use for my system?
 
@@ -41,7 +50,8 @@ Here are some common systems that people use Clash on, and the recommended relea
 - MediaTek MT7620A, MT7621A: mipsle-softfloat ([#136](https://github.com/pp-chicken/clash-core-backup/issues/136))
 - mips_24kc: [#192](https://github.com/pp-chicken/clash-core-backup/issues/192)
 
-If your device is not listed here, you can check the CPU architecture of your device with `uname -m` and find the corresponding release in the release page.
+If your device is not listed here, you can check the CPU architecture of your device with `uname -m` and find the
+corresponding release in the release page.
 
 ## List of wontfix
 
@@ -64,7 +74,8 @@ The following will be considered implementing when the official Go QUIC library 
 
 ## Proxies work on my local machine, but not on my router or in a container
 
-Your system might be out of sync in time. Refer to your platform documentations about time synchronisation - things will break if time is not in sync.
+Your system might be out of sync in time. Refer to your platform documentations about time synchronisation - things will
+break if time is not in sync.
 
 ## Time complexity of rule matching
 
@@ -85,11 +96,13 @@ If you stumbled on this error message:
 FATA[0000] Parse config error: Rules[0] [RULE-SET,apple,REJECT] error: unsupported rule type RULE-SET
 ```
 
-You're using Clash open-source edition. Rule Providers is currently only available in the [Premium core](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium). (it's free)
+You're using Clash open-source edition. Rule Providers is currently only available in
+the [Premium core](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium). (it's free)
 
 ## DNS Hijack does not work
 
-Since `tun.auto-route` does not intercept LAN traffic, if your system DNS is set to servers in private subnets, DNS hijack will not work. You can either:
+Since `tun.auto-route` does not intercept LAN traffic, if your system DNS is set to servers in private subnets, DNS
+hijack will not work. You can either:
 
 1. Use a non-private DNS server as your system DNS like `1.1.1.1`
 2. Or manually set up your system DNS to the Clash DNS (by default, `198.18.0.1`)

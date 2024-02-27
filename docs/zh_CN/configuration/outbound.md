@@ -17,11 +17,11 @@ Proxies 代理节点是您可以配置的一些出站目标. 就像代理服务�
 
 Clash 支持以下 Shadowsocks 的加密方法:
 
-| 系列 | 加密方法 |
-| ------ | ------- |
+| 系列   | 加密方法                                                                                   |
+|------|----------------------------------------------------------------------------------------|
 | AEAD | aes-128-gcm, aes-192-gcm, aes-256-gcm, chacha20-ietf-poly1305, xchacha20-ietf-poly1305 |
-| 流式 | aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20 |
-| 块式 | aes-128-ctr, aes-192-ctr, aes-256-ctr |
+| 流式   | aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20               |
+| 块式   | aes-128-ctr, aes-192-ctr, aes-256-ctr                                                  |
 
 此外, Clash 还支持流行的 Shadowsocks 插件 `obfs` 和 `v2ray-plugin`.
 
@@ -83,8 +83,8 @@ Clash 也支持声名狼藉的反审查协议 ShadowsocksR.
 
 支持以下 ShadowsocksR 的加密方法:
 
-| 系列 | 加密方法 |
-| ------ | ------- |
+| 系列 | 加密方法                                                                     |
+|----|--------------------------------------------------------------------------|
 | 流式 | aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20 |
 
 支持的混淆方法:
@@ -353,7 +353,8 @@ Proxy Groups 策略组用于根据不同策略分发规则传递过来的请求,
 
 ### url-test 延迟测试
 
-Clash 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**延迟**. 可以设置最大容忍值、测试间隔和目标 URL.
+Clash 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**延迟**. 可以设置最大容忍值、测试间隔和目标
+URL.
 
 ### fallback 可用性测试
 
@@ -365,7 +366,8 @@ Clash 会周期性地通过指定的 URL 向列表中的代理服务器发送 HT
 
 ### select 手动选择
 
-Clash 启动时默认使用策略组中的第一个代理服务器. 用户可以使用 RESTful API 选择要使用的代理服务器. 在此模式下, 您可以在配置中硬编码服务器或使用 [Proxy Providers 代理集](#proxy-providers-代理集) 动态添加服务器.
+Clash 启动时默认使用策略组中的第一个代理服务器. 用户可以使用 RESTful API 选择要使用的代理服务器. 在此模式下,
+您可以在配置中硬编码服务器或使用 [Proxy Providers 代理集](#proxy-providers-代理集) 动态添加服务器.
 
 无论哪种方式, 有时您也可以使用直接连接来路由数据包. 在这种情况下, 您可以使用 `DIRECT` 直连出站.
 

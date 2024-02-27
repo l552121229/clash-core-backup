@@ -1,6 +1,6 @@
 name: Deploy
 on:
-  workflow_dispatch: {}
+  workflow_dispatch: { }
   push:
     branches:
       - master
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [ 20 ]
     permissions:
       pages: write
       id-token: write

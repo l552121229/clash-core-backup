@@ -81,7 +81,8 @@ func (wsc *websocketConn) Write(b []byte) (int, error) {
 
 func (wsc *websocketConn) Close() error {
 	var errors []string
-	if err := wsc.conn.WriteControl(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""), time.Now().Add(time.Second*5)); err != nil {
+	if err := wsc.conn.WriteControl(websocket.CloseMessage,
+		websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""), time.Now().Add(time.Second*5)); err != nil {
 		errors = append(errors, err.Error())
 	}
 	if err := wsc.conn.Close(); err != nil {

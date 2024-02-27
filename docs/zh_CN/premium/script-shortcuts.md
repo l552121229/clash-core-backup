@@ -7,9 +7,11 @@ sidebarOrder: 6
 
 Clash Premium 实现了基于 Python3 的脚本功能, 允许用户以动态灵活的方式为数据包选择策略.
 
-您可以使用单个 Python 脚本控制整个规则匹配引擎, 也可以定义一些 Shortcuts 捷径并将它们与常规规则一起使用. 本页参考后者功能. 有关前者, 请参见 [脚本](./script.md).
+您可以使用单个 Python 脚本控制整个规则匹配引擎, 也可以定义一些 Shortcuts 捷径并将它们与常规规则一起使用. 本页参考后者功能.
+有关前者, 请参见 [脚本](./script.md).
 
-此功能使得在 `rules` 模式下使用脚本成为可能. 默认情况下, DNS 解析将在 SCRIPT 规则中进行. 可以在规则后面添加 `no-resolve` 来阻止解析. (例如: `SCRIPT,quic,DIRECT,no-resolve`)
+此功能使得在 `rules` 模式下使用脚本成为可能. 默认情况下, DNS 解析将在 SCRIPT 规则中进行. 可以在规则后面添加 `no-resolve`
+来阻止解析. (例如: `SCRIPT,quic,DIRECT,no-resolve`)
 
 ```yaml
 mode: Rule

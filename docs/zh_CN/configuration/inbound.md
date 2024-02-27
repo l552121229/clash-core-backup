@@ -40,7 +40,8 @@ mixed-port: 7890
 
 ## Mixed 混合端口
 
-混合端口是一个特殊的端口, 它同时支持 HTTP(S) 和 SOCKS5 协议. 您可以使用任何支持 HTTP 或 SOCKS 代理的程序连接到这个端口, 例如:
+混合端口是一个特殊的端口, 它同时支持 HTTP(S) 和 SOCKS5 协议. 您可以使用任何支持 HTTP 或 SOCKS 代理的程序连接到这个端口,
+例如:
 
 ```shell
 $ curl -x socks5h://127.0.0.1:7890 -v http://connect.rom.miui.com/generate_204
@@ -66,4 +67,5 @@ $ curl -x socks5h://127.0.0.1:7890 -v http://connect.rom.miui.com/generate_204
 
 Redirect 和 TProxy 是两种实现透明代理的不同方式, 均被 Clash 所支持.
 
-然而, 您不一定需要手动设置这两个功能 - 我们建议您使用 [Clash Premium 版本](/zh_CN/premium/introduction) 来配置透明代理, 因为它内置了对操作系统路由表、规则和 nftables 的自动管理.
+然而, 您不一定需要手动设置这两个功能 - 我们建议您使用 [Clash Premium 版本](/zh_CN/premium/introduction) 来配置透明代理,
+因为它内置了对操作系统路由表、规则和 nftables 的自动管理.

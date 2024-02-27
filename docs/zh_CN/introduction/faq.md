@@ -5,7 +5,8 @@ sidebarOrder: 4
 
 # 常见问题
 
-这里是一些大家遇到的常见问题. 如果您有任何此处未列出的问题, 请随时[提交一个 issue](https://github.com/pp-chicken/clash-core-backup/issues/new/choose).
+这里是一些大家遇到的常见问题. 如果您有任何此处未列出的问题,
+请随时[提交一个 issue](https://github.com/pp-chicken/clash-core-backup/issues/new/choose).
 
 [[toc]]
 
@@ -23,9 +24,12 @@ sidebarOrder: 4
 > - GOAMD64=v3: 所有 v2 指令, 加上 AVX、AVX2、BMI1、BMI2、F16C、FMA、LZCNT、MOVBE、OSXSAVE.
 > - GOAMD64=v4: 所有 v3 指令, 加上 AVX512F、AVX512BW、AVX512CD、AVX512DQ、AVX512VL.
 >
-> 例如, 设置 `GOAMD64=v3` 将允许 Go 编译器在生成的二进制文件中使用 AVX2 指令 (这可能会在某些情况下提高性能) ；但是这些二进制文件将无法在不支持 AVX2 的旧 x86 处理器上运行.
+> 例如, 设置 `GOAMD64=v3` 将允许 Go 编译器在生成的二进制文件中使用 AVX2 指令 (这可能会在某些情况下提高性能)
+> ；但是这些二进制文件将无法在不支持 AVX2 的旧 x86 处理器上运行.
 >
-> Go工具链也可能生成较新的指令, 但会存在动态检查保护, 确保它们只在有能力的处理器上执行. 例如在 `GOAMD64=v1` 的情况下, 如果 [CPUID](https://www.felixcloutier.com/x86/cpuid) 报告说 [POPCNT](https://www.felixcloutier.com/x86/popcnt) 指令可用, [math/bits.OnesCount](https://pkg.go.dev/math/bits#OnesCount) 仍将使用该指令. 否则, 它就会退回到一个通用的实现.
+> Go工具链也可能生成较新的指令, 但会存在动态检查保护, 确保它们只在有能力的处理器上执行. 例如在 `GOAMD64=v1` 的情况下,
+> 如果 [CPUID](https://www.felixcloutier.com/x86/cpuid) 报告说 [POPCNT](https://www.felixcloutier.com/x86/popcnt)
+> 指令可用, [math/bits.OnesCount](https://pkg.go.dev/math/bits#OnesCount) 仍将使用该指令. 否则, 它就会退回到一个通用的实现.
 >
 > Go 工具链目前不会生成任何 AVX512 指令.
 >
@@ -85,7 +89,8 @@ sidebarOrder: 4
 FATA[0000] Parse config error: Rules[0] [RULE-SET,apple,REJECT] error: unsupported rule type RULE-SET
 ```
 
-您正在使用 Clash 开源版. 规则 Providers 目前仅在 [免费 Premium 内核](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium) 中可用.
+您正在使用 Clash 开源版. 规则 Providers
+目前仅在 [免费 Premium 内核](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium) 中可用.
 
 ## DNS 劫持不起作用
 

@@ -5,7 +5,8 @@ sidebarOrder: 3
 
 # Clash as a Service
 
-While Clash is meant to be run in the background, there's currently no elegant way to implement daemons with Golang, hence we recommend you to daemonize Clash with third-party tools.
+While Clash is meant to be run in the background, there's currently no elegant way to implement daemons with Golang,
+hence we recommend you to daemonize Clash with third-party tools.
 
 ## systemd
 
@@ -58,16 +59,21 @@ systemctl status clash
 journalctl -xe
 ```
 
-Credits to [ktechmidas](https://github.com/ktechmidas) for this guide. ([#754](https://github.com/pp-chicken/clash-core-backup/issues/754))
+Credits to [ktechmidas](https://github.com/ktechmidas) for this
+guide. ([#754](https://github.com/pp-chicken/clash-core-backup/issues/754))
 
 ## Docker
 
-We provide pre-built images of Clash and Clash Premium. Therefore you can deploy Clash with [Docker Compose](https://docs.docker.com/compose/) if you're on Linux. However, you should be advised that it's [not recommended](https://github.com/pp-chicken/clash-core-backup/issues/2249#issuecomment-1203494599) to run **Clash Premium** in a container.
+We provide pre-built images of Clash and Clash Premium. Therefore you can deploy Clash
+with [Docker Compose](https://docs.docker.com/compose/) if you're on Linux. However, you should be advised that
+it's [not recommended](https://github.com/pp-chicken/clash-core-backup/issues/2249#issuecomment-1203494599) to run *
+*Clash Premium** in a container.
 
 ::: warning
-This setup will not work on macOS systems due to the lack of [host networking and TUN support](https://github.com/pp-chicken/clash-core-backup/issues/770#issuecomment-650951876) in Docker for Mac.
+This setup will not work on macOS systems due to the lack
+of [host networking and TUN support](https://github.com/pp-chicken/clash-core-backup/issues/770#issuecomment-650951876)
+in Docker for Mac.
 :::
-
 
 ::: code-group
 
@@ -110,7 +116,8 @@ services:
 Save as `docker-compose.yaml` and place your `config.yaml` in the same directory.
 
 ::: tip
-Before proceeding, refer to your platform documentations about time synchronisation - things will break if time is not in sync.
+Before proceeding, refer to your platform documentations about time synchronisation - things will break if time is not
+in sync.
 :::
 
 When you're ready, run the following commands to bring up Clash:

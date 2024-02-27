@@ -5,11 +5,15 @@ sidebarOrder: 6
 
 # Script Shortcuts
 
-Clash Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies for the packets with dynamic flexibility.
+Clash Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies
+for the packets with dynamic flexibility.
 
-You can either controll the entire rule-matching engine with a single Python script, or define a number of shortcuts and use them in companion with the regular rules. This page refers to the latter feature. For the former, see [Script](./script.md).
+You can either controll the entire rule-matching engine with a single Python script, or define a number of shortcuts and
+use them in companion with the regular rules. This page refers to the latter feature. For the former,
+see [Script](./script.md).
 
-This feature enables the use of script in `rules` mode. By default, DNS resolution takes place for SCRIPT rules. `no-resolve` can be appended to the rule to prevent the resolution. (i.e.: `SCRIPT,quic,DIRECT,no-resolve`)
+This feature enables the use of script in `rules` mode. By default, DNS resolution takes place for SCRIPT
+rules. `no-resolve` can be appended to the rule to prevent the resolution. (i.e.: `SCRIPT,quic,DIRECT,no-resolve`)
 
 ```yaml
 mode: Rule
@@ -27,9 +31,11 @@ rules:
 
 ## Evaluation Engines
 
-[Expr](https://expr.medv.io/) is used as the default engine for Script Shortcuts, offering 10x to 20x performance boost compared to Starlark.
+[Expr](https://expr.medv.io/) is used as the default engine for Script Shortcuts, offering 10x to 20x performance boost
+compared to Starlark.
 
-[Starlark](https://github.com/google/starlark-go) is a Python-like langauge for configuration purposes, you can also use it for Script Shortcuts.
+[Starlark](https://github.com/google/starlark-go) is a Python-like langauge for configuration purposes, you can also use
+it for Script Shortcuts.
 
 ## Variables
 

@@ -5,7 +5,8 @@ sidebarOrder: 1
 
 # Rule-based Wireguard
 
-Suppose your kernel supports Wireguard and you have it enabled. The `Table` option stops _wg-quick_ from overriding default routes.
+Suppose your kernel supports Wireguard and you have it enabled. The `Table` option stops _wg-quick_ from overriding
+default routes.
 
 Example `wg0.conf`:
 
@@ -37,4 +38,5 @@ rules:
   - DOMAIN,google.com,Wireguard
 ```
 
-This should perform better than whereas if Clash implemented its own userspace Wireguard client. Wireguard is supported in the kernel.
+This should perform better than whereas if Clash implemented its own userspace Wireguard client. Wireguard is supported
+in the kernel.

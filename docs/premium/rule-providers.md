@@ -5,7 +5,8 @@ sidebarOrder: 4
 
 # Rule Providers
 
-Rule Providers are pretty much the same compared to Proxy Providers. It enables users to load rules from external sources and overall cleaner configuration. This feature is currently Premium core only.
+Rule Providers are pretty much the same compared to Proxy Providers. It enables users to load rules from external
+sources and overall cleaner configuration. This feature is currently Premium core only.
 
 To define a Rule Provider, add the `rule-providers` field to the main configuration:
 

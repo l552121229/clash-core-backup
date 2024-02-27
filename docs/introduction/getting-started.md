@@ -9,7 +9,8 @@ To get started with Clash, you can either build it from source or download pre-b
 
 ## Using pre-built binaries
 
-You can download Clash core binaries here: [https://github.com/pp-chicken/clash-core-backup/releases](https://github.com/pp-chicken/clash-core-backup/releases)
+You can download Clash core binaries
+here: [https://github.com/pp-chicken/clash-core-backup/releases](https://github.com/pp-chicken/clash-core-backup/releases)
 
 ## Install from source
 
@@ -29,7 +30,8 @@ Clash unknown version darwin arm64 with go1.20.3 unknown time
 
 ## Build for a different arch/os
 
-Golang supports cross-compilation, so you can build for a device on a different architecture or operating system. You can use _make_ to build them easily - for example:
+Golang supports cross-compilation, so you can build for a device on a different architecture or operating system. You
+can use _make_ to build them easily - for example:
 
 ```shell
 $ git clone --depth 1 https://github.com/pp-chicken/clash-core-backup

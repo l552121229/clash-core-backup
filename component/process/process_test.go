@@ -28,7 +28,8 @@ func testConn(t *testing.T, network, address string) {
 	}
 	defer rConn.Close()
 
-	path, err := FindProcessPath(TCP, conn.LocalAddr().(*net.TCPAddr).AddrPort(), conn.RemoteAddr().(*net.TCPAddr).AddrPort())
+	path, err := FindProcessPath(TCP, conn.LocalAddr().(*net.TCPAddr).AddrPort(),
+		conn.RemoteAddr().(*net.TCPAddr).AddrPort())
 	if err != nil {
 		assert.FailNow(t, "Find process path failed", err)
 	}

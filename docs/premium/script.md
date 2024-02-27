@@ -5,9 +5,12 @@ sidebarOrder: 5
 
 # Script
 
-Clash Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies for the packets with dynamic flexibility.
+Clash Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies
+for the packets with dynamic flexibility.
 
-You can either control the entire rule-matching engine with a single Python script, or define a number of shortcuts and use them in companion with the regular rules. This page refers to the first feature, for the latter, see [Script Shortcuts](./script-shortcuts.md).
+You can either control the entire rule-matching engine with a single Python script, or define a number of shortcuts and
+use them in companion with the regular rules. This page refers to the first feature, for the latter,
+see [Script Shortcuts](./script-shortcuts.md).
 
 ## Scripting the entire rule-matching engine
 
@@ -30,7 +33,8 @@ script:
       return "Proxy" # default policy for requests which are not matched by any other script
 ```
 
-If you want to use ip rules (i.e.: IP-CIDR, GEOIP, etc), you will first need to manually resolve IP addresses and assign them to metadata:
+If you want to use ip rules (i.e.: IP-CIDR, GEOIP, etc), you will first need to manually resolve IP addresses and assign
+them to metadata:
 
 ```python
 def main(ctx, metadata):

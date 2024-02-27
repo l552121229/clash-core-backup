@@ -7,7 +7,8 @@ sidebarOrder: 1
 
 在本章中, 我们将介绍 Clash 的常见功能以及如何使用和配置它们.
 
-Clash 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配置文件格式. YAML 旨在易于阅读、编写和解析, 通常用于配置文件.
+Clash 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配置文件格式. YAML 旨在易于阅读、编写和解析,
+通常用于配置文件.
 
 ## 了解 Clash 的工作原理
 
@@ -19,11 +20,13 @@ Clash 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配置�
 
 ### Inbound 入站
 
-Inbound 入站是在本地端监听的部分, 它通过打开一个本地端口并监听传入的连接来工作. 当连接进来时, Clash 会查询配置文件中配置的规则, 并决定连接应该去哪个 Outbound 出站.
+Inbound 入站是在本地端监听的部分, 它通过打开一个本地端口并监听传入的连接来工作. 当连接进来时, Clash 会查询配置文件中配置的规则,
+并决定连接应该去哪个 Outbound 出站.
 
 ### Outbound 出站
 
-Outbound 出站是连接到远程端的部分. 根据配置的不同, 它可以是一个特定的网络接口、一个代理服务器或一个[策略组](/zh_CN/configuration/outbound#proxy-groups-策略组).
+Outbound 出站是连接到远程端的部分. 根据配置的不同,
+它可以是一个特定的网络接口、一个代理服务器或一个[策略组](/zh_CN/configuration/outbound#proxy-groups-策略组).
 
 ## 基于规则的路由
 

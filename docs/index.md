@@ -1,22 +1,29 @@
 <!-- This is the index page, linked by the dummy sidebar item at Introduction/_dummy-index.md -->
+
 # What is Clash?
 
 Welcome to the official knowledge base of the Clash core project ("Clash").
 
-Clash is a cross-platform rule-based proxy utility that runs on the network and application layer, supporting various proxy and anti-censorship protocols out-of-the-box.
+Clash is a cross-platform rule-based proxy utility that runs on the network and application layer, supporting various
+proxy and anti-censorship protocols out-of-the-box.
 
-It has been adopted widely by the Internet users in some countries and regions where the Internet is heavily censored or blocked. Either way, Clash can be used by anyone who wants to improve their Internet experience.
+It has been adopted widely by the Internet users in some countries and regions where the Internet is heavily censored or
+blocked. Either way, Clash can be used by anyone who wants to improve their Internet experience.
 
 There are currently two editions of Clash:
 
-- [Clash](https://github.com/pp-chicken/clash-core-backup): the open-source version released at [github.com/pp-chicken/clash-core-backup](https://github.com/pp-chicken/clash-core-backup)
-- [Clash Premium](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium): proprietary core with [TUN support and more](/premium/introduction) (free of charge)
+- [Clash](https://github.com/pp-chicken/clash-core-backup): the open-source version released
+  at [github.com/pp-chicken/clash-core-backup](https://github.com/pp-chicken/clash-core-backup)
+- [Clash Premium](https://github.com/pp-chicken/clash-core-backup/releases/tag/premium): proprietary core
+  with [TUN support and more](/premium/introduction) (free of charge)
 
-While this wiki covers both, however, the use of Clash could be challenging for the average users. Those might want to consider using a GUI client instead, and we do have some recommendations:
+While this wiki covers both, however, the use of Clash could be challenging for the average users. Those might want to
+consider using a GUI client instead, and we do have some recommendations:
 
 - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows and macOS)
 - [Clash for Android](https://github.com/Kr328/ClashForAndroid)
-- [ClashX](https://github.com/yichengchen/clashX) or [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)
+- [ClashX](https://github.com/yichengchen/clashX)
+  or [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)
 
 ## Feature Overview
 
@@ -35,4 +42,7 @@ While this wiki covers both, however, the use of Clash could be challenging for 
 
 ## License
 
-Clash is released under the [GPL-3.0](https://github.com/pp-chicken/clash-core-backup/blob/master/LICENSE) open-source license. Prior to [v0.16.0](https://github.com/pp-chicken/clash-core-backup/releases/tag/v0.16.0) or commit [e5284c](https://github.com/pp-chicken/clash-core-backup/commit/e5284cf647717a8087a185d88d15a01096274bc2), it was licensed under the MIT license.
+Clash is released under the [GPL-3.0](https://github.com/pp-chicken/clash-core-backup/blob/master/LICENSE) open-source
+license. Prior to [v0.16.0](https://github.com/pp-chicken/clash-core-backup/releases/tag/v0.16.0) or
+commit [e5284c](https://github.com/pp-chicken/clash-core-backup/commit/e5284cf647717a8087a185d88d15a01096274bc2), it was
+licensed under the MIT license.

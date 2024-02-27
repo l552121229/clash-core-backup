@@ -1,33 +1,33 @@
 {
-    "inbounds": [
+    "inbounds" : [
         {
-            "port": 10002,
-            "listen": "0.0.0.0",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
+            "port" : 10002,
+            "listen" : "0.0.0.0",
+            "protocol" : "vmess",
+            "settings" : {
+                "clients" : [
                     {
-                        "id": "b831381d-6324-4d53-ad4f-8cda48b30811"
+                        "id" : "b831381d-6324-4d53-ad4f-8cda48b30811"
                     }
                 ]
             },
-            "streamSettings": {
-                "network": "ws",
-                "security": "tls",
-                "tlsSettings": {
-                    "certificates": [
+            "streamSettings" : {
+                "network" : "ws",
+                "security" : "tls",
+                "tlsSettings" : {
+                    "certificates" : [
                         {
-                            "certificateFile": "/etc/ssl/v2ray/fullchain.pem",
-                            "keyFile": "/etc/ssl/v2ray/privkey.pem"
+                            "certificateFile" : "/etc/ssl/v2ray/fullchain.pem",
+                            "keyFile" : "/etc/ssl/v2ray/privkey.pem"
                         }
                     ]
                 }
             }
         }
     ],
-    "outbounds": [
+    "outbounds" : [
         {
-            "protocol": "freedom"
+            "protocol" : "freedom"
         }
     ]
 }

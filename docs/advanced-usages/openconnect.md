@@ -5,11 +5,14 @@ sidebarOrder: 2
 
 # Rule-based OpenConnect
 
-OpenConnect supports Cisco AnyConnect SSL VPN, Juniper Network Connect, Palo Alto Networks (PAN) GlobalProtect SSL VPN, Pulse Connect Secure SSL VPN, F5 BIG-IP SSL VPN, FortiGate SSL VPN and Array Networks SSL VPN.
+OpenConnect supports Cisco AnyConnect SSL VPN, Juniper Network Connect, Palo Alto Networks (PAN) GlobalProtect SSL VPN,
+Pulse Connect Secure SSL VPN, F5 BIG-IP SSL VPN, FortiGate SSL VPN and Array Networks SSL VPN.
 
-For example, there would be a use case where your company uses Cisco AnyConnect for internal network access. Here I'll show you how you can use OpenConnect with policy routing powered by Clash.
+For example, there would be a use case where your company uses Cisco AnyConnect for internal network access. Here I'll
+show you how you can use OpenConnect with policy routing powered by Clash.
 
-First, [install vpn-slice](https://github.com/dlenski/vpn-slice#requirements). This tool overrides default routing table behaviour of OpenConnect. Simply saying, it stops the VPN from overriding your default routes.
+First, [install vpn-slice](https://github.com/dlenski/vpn-slice#requirements). This tool overrides default routing table
+behaviour of OpenConnect. Simply saying, it stops the VPN from overriding your default routes.
 
 Next you would have a script (let's say `tun0.sh`) similar to this:
 
@@ -69,7 +72,8 @@ systemctl enable tun0
 systemctl start tun0
 ```
 
-From here you can look at the logs to see if it's running properly. Simple way is to look at if `tun0` interface has been created.
+From here you can look at the logs to see if it's running properly. Simple way is to look at if `tun0` interface has
+been created.
 
 Similar to the Wireguard one, having an outbound to a TUN device is simple as adding a proxy group:
 
