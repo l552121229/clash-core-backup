@@ -2,6 +2,7 @@ package transport
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"github.com/pp-chicken/clash-core-backup/adapter/outbound"
 	"github.com/pp-chicken/clash-core-backup/config"
@@ -19,6 +20,9 @@ type Server struct {
 }
 
 func NewServer(configFilePath string) (*Server, error) {
+	if configFilePath == "" {
+		return nil, errors.New("clash配置文件目录不能为空")
+	}
 	C.SetConfig(configFilePath)
 	if err := config.Init(C.Path.HomeDir()); err != nil {
 		log.Fatalln("Initial configuration directory error: %s", err.Error())

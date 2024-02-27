@@ -1,7 +1,11 @@
 package main
 
 import (
+	"github.com/pp-chicken/clash-core-backup/listener/transport"
+	"io"
 	"net"
+	"net/http"
+	"os"
 	"strconv"
 	"testing"
 	"time"
@@ -75,4 +79,28 @@ log-level: silent
 
 	require.True(t, TCPing("127.0.0.1:7891"))
 	require.Equal(t, len(inbounds), len(listener.GetInbounds()))
+}
+func TestClash_HttpTransport(t *testing.T) {
+	server, err := transport.NewServer(os.Getenv("CLASH_PATH"))
+	if err != nil {
+		t.Fatal("clash初始化错误", err)
+	}
+	go server.Run()
+	httpClient := http.Client{
+		Transport: server.GetTransport(),
+		Timeout:   10 * time.Second,
+	}
+	get, err := httpClient.Get("http://ip-api.com/json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	data, readErr := io.ReadAll(get.Body)
+	if readErr != nil {
+		t.Fatal(readErr)
+	}
+	if get.StatusCode >= 200 && get.StatusCode < 300 {
+		t.Log("请求结果", get.Status, string(data))
+		return
+	}
+	t.Fatal("请求失败", get.Status, string(data))
 }
