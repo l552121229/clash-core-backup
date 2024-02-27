@@ -3,12 +3,12 @@ package socks
 import (
 	"net"
 
-	"github.com/l552121229/clash-core-backup/adapter/inbound"
-	"github.com/l552121229/clash-core-backup/common/pool"
-	"github.com/l552121229/clash-core-backup/common/sockopt"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/log"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/adapter/inbound"
+	"github.com/pp-chicken/clash-core-backup/common/pool"
+	"github.com/pp-chicken/clash-core-backup/common/sockopt"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
 )
 
 type UDPListener struct {

@@ -3,8 +3,8 @@ package outboundgroup
 import (
 	"time"
 
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/constant/provider"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/constant/provider"
 )
 
 const (

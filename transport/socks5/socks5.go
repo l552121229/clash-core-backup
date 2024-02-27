@@ -9,9 +9,9 @@ import (
 	"net/netip"
 	"strconv"
 
-	"github.com/l552121229/clash-core-backup/component/auth"
+	"github.com/pp-chicken/clash-core-backup/component/auth"
 
-	"github.com/l552121229/protobytes"
+	"github.com/pp-chicken/protobytes"
 )
 
 // Error represents a SOCKS error

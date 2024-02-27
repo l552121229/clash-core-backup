@@ -4,12 +4,12 @@ import (
 	"io"
 	"net"
 
-	"github.com/l552121229/clash-core-backup/adapter/inbound"
-	N "github.com/l552121229/clash-core-backup/common/net"
-	C "github.com/l552121229/clash-core-backup/constant"
-	authStore "github.com/l552121229/clash-core-backup/listener/auth"
-	"github.com/l552121229/clash-core-backup/transport/socks4"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/adapter/inbound"
+	N "github.com/pp-chicken/clash-core-backup/common/net"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	authStore "github.com/pp-chicken/clash-core-backup/listener/auth"
+	"github.com/pp-chicken/clash-core-backup/transport/socks4"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
 )
 
 type Listener struct {

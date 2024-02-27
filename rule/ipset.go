@@ -1,9 +1,9 @@
 package rules
 
 import (
-	"github.com/l552121229/clash-core-backup/component/ipset"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/component/ipset"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/log"
 )
 
 // Implements C.Rule

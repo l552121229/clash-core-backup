@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/l552121229/clash-core-backup/component/dialer"
-	"github.com/l552121229/clash-core-backup/component/resolver"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/transport/gun"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
-	"github.com/l552121229/clash-core-backup/transport/vmess"
+	"github.com/pp-chicken/clash-core-backup/component/dialer"
+	"github.com/pp-chicken/clash-core-backup/component/resolver"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/transport/gun"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/transport/vmess"
 
 	"golang.org/x/net/http2"
 )

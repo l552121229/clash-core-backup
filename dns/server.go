@@ -4,9 +4,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/l552121229/clash-core-backup/common/sockopt"
-	"github.com/l552121229/clash-core-backup/context"
-	"github.com/l552121229/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/common/sockopt"
+	"github.com/pp-chicken/clash-core-backup/context"
+	"github.com/pp-chicken/clash-core-backup/log"
 
 	D "github.com/miekg/dns"
 )

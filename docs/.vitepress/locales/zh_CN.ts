@@ -27,11 +27,11 @@ export default defineConfig({
     sidebar: chapters,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/l552121229/clash-core-backup' },
+      { icon: 'github', link: 'https://github.com/pp-chicken/clash-core-backup' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/l552121229/clash-core-backup/edit/master/docs/:path',
+      pattern: 'https://github.com/pp-chicken/clash-core-backup/edit/master/docs/:path',
       text: '在 GitHub 中编辑此页面'
     },
 
@@ -52,8 +52,8 @@ function nav() {
     {
       text: '下载',
       items: [
-        { text: 'GitHub 开源版', link: 'https://github.com/l552121229/clash-core-backup/releases/' },
-        { text: 'Premium 版本', link: 'https://github.com/l552121229/clash-core-backup/releases/tag/premium' },
+        { text: 'GitHub 开源版', link: 'https://github.com/pp-chicken/clash-core-backup/releases/' },
+        // { text: 'Premium 版本', link: 'https://github.com/pp-chicken/clash-core-backup/releases/tag/premium' },
       ]
     }
   ]

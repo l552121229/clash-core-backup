@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/l552121229/clash-core-backup/component/profile"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/component/profile"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/log"
 
 	"go.etcd.io/bbolt"
 )

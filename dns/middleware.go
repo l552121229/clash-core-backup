@@ -5,12 +5,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/l552121229/clash-core-backup/common/cache"
-	"github.com/l552121229/clash-core-backup/component/fakeip"
-	"github.com/l552121229/clash-core-backup/component/trie"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/context"
-	"github.com/l552121229/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/common/cache"
+	"github.com/pp-chicken/clash-core-backup/component/fakeip"
+	"github.com/pp-chicken/clash-core-backup/component/trie"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/context"
+	"github.com/pp-chicken/clash-core-backup/log"
 
 	D "github.com/miekg/dns"
 )

@@ -2,8 +2,8 @@ NAME=clash
 BINDIR=bin
 VERSION=$(shell git describe --tags || echo "unknown version")
 BUILDTIME=$(shell date -u)
-GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/l552121229/clash-core-backup/constant.Version=$(VERSION)" \
-		-X "github.com/l552121229/clash-core-backup/constant.BuildTime=$(BUILDTIME)" \
+GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/pp-chicken/clash-core-backup/constant.Version=$(VERSION)" \
+		-X "github.com/pp-chicken/clash-core-backup/constant.BuildTime=$(BUILDTIME)" \
 		-w -s -buildid='
 
 PLATFORM_LIST = \

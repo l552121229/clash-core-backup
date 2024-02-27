@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
-	types "github.com/l552121229/clash-core-backup/constant/provider"
-	"github.com/l552121229/clash-core-backup/log"
+	types "github.com/pp-chicken/clash-core-backup/constant/provider"
+	"github.com/pp-chicken/clash-core-backup/log"
 )
 
 var (

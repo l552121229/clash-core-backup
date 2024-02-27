@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	C "github.com/l552121229/clash-core-backup/constant"
+	C "github.com/pp-chicken/clash-core-backup/constant"
 )
 
 // Implements C.Rule

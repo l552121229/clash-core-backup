@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/l552121229/clash-core-backup/common/pool"
-	"github.com/l552121229/clash-core-backup/log"
-	"github.com/l552121229/clash-core-backup/transport/shadowsocks/core"
-	"github.com/l552121229/clash-core-backup/transport/ssr/tools"
+	"github.com/pp-chicken/clash-core-backup/common/pool"
+	"github.com/pp-chicken/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/transport/shadowsocks/core"
+	"github.com/pp-chicken/clash-core-backup/transport/ssr/tools"
 )
 
 func init() {

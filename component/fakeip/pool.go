@@ -6,9 +6,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/l552121229/clash-core-backup/common/cache"
-	"github.com/l552121229/clash-core-backup/component/profile/cachefile"
-	"github.com/l552121229/clash-core-backup/component/trie"
+	"github.com/pp-chicken/clash-core-backup/common/cache"
+	"github.com/pp-chicken/clash-core-backup/component/profile/cachefile"
+	"github.com/pp-chicken/clash-core-backup/component/trie"
 )
 
 type store interface {

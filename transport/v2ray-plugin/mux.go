@@ -7,7 +7,7 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/l552121229/protobytes"
+	"github.com/pp-chicken/protobytes"
 )
 
 type SessionStatus = byte

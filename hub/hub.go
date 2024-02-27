@@ -1,9 +1,9 @@
 package hub
 
 import (
-	"github.com/l552121229/clash-core-backup/config"
-	"github.com/l552121229/clash-core-backup/hub/executor"
-	"github.com/l552121229/clash-core-backup/hub/route"
+	"github.com/pp-chicken/clash-core-backup/config"
+	"github.com/pp-chicken/clash-core-backup/hub/executor"
+	"github.com/pp-chicken/clash-core-backup/hub/route"
 )
 
 type Option func(*config.Config)

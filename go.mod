@@ -1,4 +1,4 @@
-module github.com/l552121229/clash-core-backup
+module github.com/pp-chicken/clash-core-backup
 
 go 1.21
 
@@ -13,6 +13,7 @@ require (
 	github.com/mdlayher/netlink v1.7.2
 	github.com/miekg/dns v1.1.55
 	github.com/oschwald/geoip2-golang v1.9.0
+	github.com/pp-chicken/protobytes v0.0.0-20240227044140-0424581f62b7
 	github.com/samber/lo v1.38.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
@@ -33,7 +34,6 @@ require (
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/josharian/native v1.1.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/l552121229/protobytes v0.0.0-20240220070239-cbfb1241575e // indirect
 	github.com/mdlayher/socket v0.4.1 // indirect
 	github.com/oschwald/maxminddb-golang v1.11.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.14 // indirect

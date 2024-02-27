@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/l552121229/clash-core-backup/adapter/outbound"
-	"github.com/l552121229/clash-core-backup/adapter/provider"
-	"github.com/l552121229/clash-core-backup/common/structure"
-	C "github.com/l552121229/clash-core-backup/constant"
-	types "github.com/l552121229/clash-core-backup/constant/provider"
+	"github.com/pp-chicken/clash-core-backup/adapter/outbound"
+	"github.com/pp-chicken/clash-core-backup/adapter/provider"
+	"github.com/pp-chicken/clash-core-backup/common/structure"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	types "github.com/pp-chicken/clash-core-backup/constant/provider"
 
 	regexp "github.com/dlclark/regexp2"
 )

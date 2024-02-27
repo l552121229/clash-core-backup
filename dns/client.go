@@ -8,8 +8,8 @@ import (
 	"net"
 	"strings"
 
-	"github.com/l552121229/clash-core-backup/component/dialer"
-	"github.com/l552121229/clash-core-backup/component/resolver"
+	"github.com/pp-chicken/clash-core-backup/component/dialer"
+	"github.com/pp-chicken/clash-core-backup/component/resolver"
 
 	D "github.com/miekg/dns"
 )

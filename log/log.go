@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/l552121229/clash-core-backup/common/observable"
+	"github.com/pp-chicken/clash-core-backup/common/observable"
 
 	log "github.com/sirupsen/logrus"
 )

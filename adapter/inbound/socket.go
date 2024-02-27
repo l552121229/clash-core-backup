@@ -4,9 +4,9 @@ import (
 	"net"
 	"net/netip"
 
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/context"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/context"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
 )
 
 // NewSocket receive TCP inbound and return ConnContext

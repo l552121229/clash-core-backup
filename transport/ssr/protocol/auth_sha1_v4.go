@@ -8,8 +8,8 @@ import (
 	"math/rand"
 	"net"
 
-	"github.com/l552121229/clash-core-backup/common/pool"
-	"github.com/l552121229/clash-core-backup/transport/ssr/tools"
+	"github.com/pp-chicken/clash-core-backup/common/pool"
+	"github.com/pp-chicken/clash-core-backup/transport/ssr/tools"
 )
 
 func init() {

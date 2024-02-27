@@ -11,7 +11,7 @@ import (
 	"hash/crc32"
 	"time"
 
-	"github.com/l552121229/protobytes"
+	"github.com/pp-chicken/protobytes"
 )
 
 const (

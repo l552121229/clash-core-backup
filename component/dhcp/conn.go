@@ -5,7 +5,7 @@ import (
 	"net"
 	"runtime"
 
-	"github.com/l552121229/clash-core-backup/component/dialer"
+	"github.com/pp-chicken/clash-core-backup/component/dialer"
 )
 
 func ListenDHCPClient(ctx context.Context, ifaceName string) (net.PacketConn, error) {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/l552121229/clash-core-backup/adapter/inbound"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/adapter/inbound"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
 )
 
 type Listener struct {

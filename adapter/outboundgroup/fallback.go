@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/l552121229/clash-core-backup/adapter/outbound"
-	"github.com/l552121229/clash-core-backup/common/singledo"
-	"github.com/l552121229/clash-core-backup/component/dialer"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/constant/provider"
+	"github.com/pp-chicken/clash-core-backup/adapter/outbound"
+	"github.com/pp-chicken/clash-core-backup/common/singledo"
+	"github.com/pp-chicken/clash-core-backup/component/dialer"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/constant/provider"
 )
 
 type Fallback struct {

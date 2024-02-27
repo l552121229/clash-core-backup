@@ -5,7 +5,7 @@ import (
 	"math"
 	"net/http"
 
-	"github.com/l552121229/clash-core-backup/component/resolver"
+	"github.com/pp-chicken/clash-core-backup/component/resolver"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/l552121229/clash-core-backup/adapter/outboundgroup"
-	"github.com/l552121229/clash-core-backup/common/structure"
+	"github.com/pp-chicken/clash-core-backup/adapter/outboundgroup"
+	"github.com/pp-chicken/clash-core-backup/common/structure"
 )
 
 func trimArr(arr []string) (r []string) {

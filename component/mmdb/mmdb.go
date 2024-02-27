@@ -3,8 +3,8 @@ package mmdb
 import (
 	"sync"
 
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/log"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/log"
 
 	"github.com/oschwald/geoip2-golang"
 )

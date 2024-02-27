@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/l552121229/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/log"
 )
 
 var printMarkWarn = sync.OnceFunc(func() {

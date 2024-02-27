@@ -5,7 +5,7 @@ import (
 	"crypto/tls"
 	"net"
 
-	C "github.com/l552121229/clash-core-backup/constant"
+	C "github.com/pp-chicken/clash-core-backup/constant"
 )
 
 type TLSConfig struct {

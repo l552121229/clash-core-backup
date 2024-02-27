@@ -10,15 +10,15 @@ import (
 	"time"
 	"unsafe"
 
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/log"
-	"github.com/l552121229/clash-core-backup/tunnel/statistic"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/log"
+	"github.com/pp-chicken/clash-core-backup/tunnel/statistic"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/render"
 	"github.com/gorilla/websocket"
-	"github.com/l552121229/protobytes"
+	"github.com/pp-chicken/protobytes"
 )
 
 var (

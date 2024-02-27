@@ -11,6 +11,6 @@ linters-settings:
     sections:
       - standard
       - default
-      - prefix(github.com/l552121229/clash-core-backup)
+      - prefix(github.com/pp-chicken/clash-core-backup)
   staticcheck:
     go: '1.21'

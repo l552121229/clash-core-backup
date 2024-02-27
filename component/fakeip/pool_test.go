@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/l552121229/clash-core-backup/component/profile/cachefile"
-	"github.com/l552121229/clash-core-backup/component/trie"
+	"github.com/pp-chicken/clash-core-backup/component/profile/cachefile"
+	"github.com/pp-chicken/clash-core-backup/component/trie"
 
 	"github.com/stretchr/testify/assert"
 	"go.etcd.io/bbolt"

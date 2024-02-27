@@ -4,10 +4,10 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/l552121229/clash-core-backup/adapter/inbound"
-	"github.com/l552121229/clash-core-backup/common/pool"
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/adapter/inbound"
+	"github.com/pp-chicken/clash-core-backup/common/pool"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
 )
 
 type UDPListener struct {

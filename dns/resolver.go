@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/l552121229/clash-core-backup/common/cache"
-	"github.com/l552121229/clash-core-backup/component/fakeip"
-	"github.com/l552121229/clash-core-backup/component/resolver"
-	"github.com/l552121229/clash-core-backup/component/trie"
-	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/common/cache"
+	"github.com/pp-chicken/clash-core-backup/component/fakeip"
+	"github.com/pp-chicken/clash-core-backup/component/resolver"
+	"github.com/pp-chicken/clash-core-backup/component/trie"
+	C "github.com/pp-chicken/clash-core-backup/constant"
 
 	D "github.com/miekg/dns"
 	"golang.org/x/sync/singleflight"

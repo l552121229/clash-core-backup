@@ -12,7 +12,7 @@ func Relay(leftConn, rightConn net.Conn) {
 
 	go func() {
 		// Wrapping to avoid using *net.TCPConn.(ReadFrom)
-		// See also https://github.com/l552121229/clash-core-backup/pull/1209
+		// See also https://github.com/pp-chicken/clash-core-backup/pull/1209
 		_, err := io.Copy(WriteOnlyWriter{Writer: leftConn}, ReadOnlyReader{Reader: rightConn})
 		leftConn.SetReadDeadline(time.Now())
 		ch <- err

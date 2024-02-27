@@ -6,11 +6,11 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/l552121229/clash-core-backup/common/structure"
-	"github.com/l552121229/clash-core-backup/component/dialer"
-	C "github.com/l552121229/clash-core-backup/constant"
-	obfs "github.com/l552121229/clash-core-backup/transport/simple-obfs"
-	"github.com/l552121229/clash-core-backup/transport/snell"
+	"github.com/pp-chicken/clash-core-backup/common/structure"
+	"github.com/pp-chicken/clash-core-backup/component/dialer"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	obfs "github.com/pp-chicken/clash-core-backup/transport/simple-obfs"
+	"github.com/pp-chicken/clash-core-backup/transport/snell"
 )
 
 type Snell struct {

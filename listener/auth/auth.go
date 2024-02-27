@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/l552121229/clash-core-backup/component/auth"
+	"github.com/pp-chicken/clash-core-backup/component/auth"
 )
 
 var authenticator auth.Authenticator

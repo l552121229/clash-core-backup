@@ -12,11 +12,11 @@ import (
 	"net/http"
 	"sync"
 
-	C "github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/transport/socks5"
-	"github.com/l552121229/clash-core-backup/transport/vmess"
+	C "github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/transport/socks5"
+	"github.com/pp-chicken/clash-core-backup/transport/vmess"
 
-	"github.com/l552121229/protobytes"
+	"github.com/pp-chicken/protobytes"
 )
 
 const (

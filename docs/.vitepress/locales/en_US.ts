@@ -27,11 +27,11 @@ export default defineConfig({
     sidebar: chapters,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/l552121229/clash-core-backup' },
+      { icon: 'github', link: 'https://github.com/pp-chicken/clash-core-backup' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/l552121229/clash-core-backup/edit/master/docs/:path',
+      pattern: 'https://github.com/pp-chicken/clash-core-backup/edit/master/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
@@ -50,8 +50,8 @@ function nav() {
     {
       text: 'Download',
       items: [
-        { text: 'Open-source Edition', link: 'https://github.com/l552121229/clash-core-backup/releases/' },
-        { text: 'Premium Edition', link: 'https://github.com/l552121229/clash-core-backup/releases/tag/premium' },
+        { text: 'Open-source Edition', link: 'https://github.com/pp-chicken/clash-core-backup/releases/' },
+        { text: 'Premium Edition', link: 'https://github.com/pp-chicken/clash-core-backup/releases/tag/premium' },
       ]
     }
   ]

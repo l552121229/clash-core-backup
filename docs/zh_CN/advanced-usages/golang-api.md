@@ -18,9 +18,9 @@ import (
 	"io"
 	"net"
 
-	"github.com/l552121229/clash-core-backup/adapter/outbound"
-	"github.com/l552121229/clash-core-backup/constant"
-	"github.com/l552121229/clash-core-backup/listener/socks"
+	"github.com/pp-chicken/clash-core-backup/adapter/outbound"
+	"github.com/pp-chicken/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/listener/socks"
 )
 
 func main() {

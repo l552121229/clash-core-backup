@@ -3,9 +3,9 @@ package dns
 import (
 	"net"
 
-	"github.com/l552121229/clash-core-backup/common/cache"
-	"github.com/l552121229/clash-core-backup/component/fakeip"
-	C "github.com/l552121229/clash-core-backup/constant"
+	"github.com/pp-chicken/clash-core-backup/common/cache"
+	"github.com/pp-chicken/clash-core-backup/component/fakeip"
+	C "github.com/pp-chicken/clash-core-backup/constant"
 )
 
 type ResolverEnhancer struct {

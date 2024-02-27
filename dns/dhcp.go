@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/l552121229/clash-core-backup/component/dhcp"
-	"github.com/l552121229/clash-core-backup/component/iface"
-	"github.com/l552121229/clash-core-backup/component/resolver"
+	"github.com/pp-chicken/clash-core-backup/component/dhcp"
+	"github.com/pp-chicken/clash-core-backup/component/iface"
+	"github.com/pp-chicken/clash-core-backup/component/resolver"
 
 	D "github.com/miekg/dns"
 )
